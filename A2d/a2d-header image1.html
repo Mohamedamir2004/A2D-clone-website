@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- this is a poppins fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- this is a nunito font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&display=swap"
+        rel="stylesheet">
+    <!-- this is nunito 800 font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,800,540;1,6..12,75..125,800,540&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-around;
+            /* flex-wrap: wrap; */
+        }
+
+        .box1 {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #fff;
+            width: 360px;
+            height: 150px;
+            text-align: center;
+            border-radius: 20px;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            /* color: rgb(15, 23, 43,0.8); */
+            font-size: 16px;
+            line-height: 2.1;
+            color: #666565;
+            font-weight: 100;
+            text-transform: capitalize;
+            transition: background-color 0.1s ease-in;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .box1:hover {
+            background-color: #ea9f30;
+            color: #fff;
+
+        }
+
+        .remain-box {
+            margin-left: 20px;
+        }
+
+        #h3 {
+            color: #ea9f30;
+            font-weight: 900;
+            font-size: 26px;
+            font-family: "Nunito", sans-serif;
+        }
+
+        /* Change h3 color to white on hover */
+        .box1:hover #h3 {
+            color: #fff;
+        }
+
+        .a2dpc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            text-align: center;
+            flex-direction: column;
+            margin-top: 90px;
+        }
+
+        .a2dpc p {
+            font-weight: 400;
+            font-family: "poppins", sans-serif;
+            color: rgb(254, 161, 22);
+            font-size: 20px;
+        }
+
+        .workex {
+            font-size: 40px;
+            color: rgb(15, 23, 43);
+            margin-top: 10px;
+            text-align: center;
+            font-style: normal;
+            text-transform: capitalize;
+            line-height: 48px;
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            /* font-variation-settings:
+                "wdth" 100,
+                "YTLC" 540; */
+        }
+
+        .line1::after {
+            content: '';
+            width: 5%;
+            height: 2px;
+            background-color: #ea9f30;
+            position: absolute;
+            box-sizing: border-box;
+            top: 50%;
+            left: 720px;
+            margin-top: -15px;
+        }
+
+        .line1::before {
+            content: '';
+            width: 5%;
+            height: 2px;
+            background-color: #ea9f30;
+            position: absolute;
+            box-sizing: border-box;
+            top: 50%;
+            right: 720px;
+            margin-top: -15px;
+        }
+
+        .details-container {
+            display: flex;
+            justify-content: space-around;
+            /* margin-left: 200px; */
+            align-items: center;
+            margin-top: 40px;
+            flex-direction: row;
+            /* flex-basis: 50%; */
+            margin-bottom: 10px;
+        }
+
+        /* .image1{
+            margin-left: 200px;
+            text-align: center;
+            width: 600px;
+            height: 300px;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        } */
+        .customer-image {
+            margin-left: 100px;
+            text-align: center;
+            width: 450px;
+            height: 300px;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.1s ease-in;
+        }
+
+        .customer-image:hover {
+            background-color: #ea9f30;
+        }
+
+        .image1 img {
+            width: 256px;
+            height: 300px;
+            padding: 10px;
+        }
+
+        .personal {
+            font-size: 40px;
+            color: rgb(15, 23, 43);
+            /* margin-top: 10px; */
+            text-align: center;
+            font-style: normal;
+            text-transform: capitalize;
+            line-height: 48px;
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            margin-left: 30px;
+            /* margin-right: 4px; */
+        }
+
+        .text-personal,
+        .text-personal1 {
+            word-spacing: 1px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            display: flex;
+            margin-left: 40px;
+            font-weight: 400;
+            font-family: "poppins", sans-serif;
+            color: #666565;
+            font-size: 16px;
+            
+        }
+
+        .customer-persona {
+            margin-top: -20px;
+        }
+
+        .text-personal1 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-container">
+        <div class="box1" id="testing">
+            <p>
+                On Site Upto
+            <h3 id="h3">1 Year </h3> Warranty
+            </p>
+        </div>
+        <div class="box1 remain-box">
+            <p>
+                In-House
+            <h3 id="h3">48 Hours </h3> Testing
+            </p>
+        </div>
+        <div class="box1 remain-box">
+            <p>
+                Know The
+            <h3 id="h3">Performance </h3>Place the order
+            </p>
+        </div>
+        <div class="box1 remain-box">
+            <p>
+                Pan India
+            <h3 id="h3">Free </h3> Delivery
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="a2dpc">
+            <p class="@pc line1">@ A2D PC Factory</p>
+            <h1 class="workex">How Things Work</h1>
+        </div>
+    </div>
+    <div class="details-container">
+        <div class="image1">
+            <div class="customer-image">
+                <img src="images/customer-support.png" alt="a2d pc factory">
+            </div>
+        </div>
+        <div class="customer-persona">
+            <h1 class="personal">BUILDING CUSTOMER PERSONA </h1>
+            <p class="text-personal">Building a customer persona is an essential step for our sales team to provide
+                tailored PC solutions. A customer persona is a detailed representation of our ideal customer based on
+                real data and insights gathered through direct interactions.</p>
+
+            <p class="text-personal1"> By developing a comprehensive understanding of our customers, we can better
+                address their specific needs, preferences, and pain points.</p>
+        </div>
+    </div>
+</body>
+
+</html>
